@@ -1,0 +1,45 @@
+[
+	{
+		"code": "GB",
+		"name": "United Kingdom"
+	},
+	{
+		"code": "DE",
+		"name": "Germany"
+	},
+	{
+		"code": "FR",
+		"name": "France"
+	},
+	{
+		"code": "ES",
+		"name": "Spain"
+	},
+	{
+		"code": "BE",
+		"name": "Belgium"
+	},
+	{
+		"code": "CH",
+		"name": "Switzerland"
+	},
+	{
+		"code": "PT",
+		"name": "Portugal"
+	},{
+		"code": "IT",
+		"name": "Italy"
+	},
+	{
+		"code": "FI",
+		"name": "Finland"
+	},
+	{
+		"code": "SE",
+		"name": "Sweden"
+	},
+	{
+		"code": "NL",
+		"name": "Netherlands"
+	}
+]
