@@ -17,7 +17,7 @@ The solution goes well for BigQuery especially the Assignment 1 part.
 
 ![GCP Cloud Functions](https://github.com/menorah84/sr_data_engineer_assessment/blob/master/img/gcp_cloud_functions.png)
 
-When it comes to Assignment 2, however, I was able to process streaming data but I discovered that Data Studio CANNOT process yet GEOGRAPHY data type from BigQuery, so that part of the requirement was not satisfied. The Retail data generator uses *faker* library to generate some dummy.
+When it comes to Assignment 2, however, I was able to process streaming data but I discovered that Data Studio [CANNOT process GEOGRAPHY data type](https://cloud.google.com/bigquery/docs/gis-visualize) yet from BigQuery, so that part of the requirement was not satisfied. The Retail data generator uses *faker* library to generate some dummy.
 
 ![Online Retail Generator](https://github.com/menorah84/sr_data_engineer_assessment/blob/master/img/gcp_online_retail_generator.png)
 
@@ -28,7 +28,7 @@ When it comes to Assignment 2, however, I was able to process streaming data but
 So here are my ideas for improvement:
 1. We could have used a schemaless datastore that has connector to some more powerful BI tool (that can also display geolocation data), say MongoDB and Tableau.
 2. For the ETL pipeline, serverless approach (Lambda / Cloud Functions) obviously has its limitations, as it is actually designed for small routines / microservices rather than  throughput intensive tasks like data processing. We could have used more robust, more capable pipeline: Airflow, Amazon Elastic MapReduce, Amazon Glue, Google Cloud Dataflow, etc. Or if cost comes to mind, maybe we can use Amazon S3-Athena (Presto) so we can directly query S3 files. If streaming capability is a requirement, we may need to engineer pipelines that involves queue (Kafka, Pubsub, Kinesis, etc.)
-3. Since this is retail data, there could be a time where a real-time analytics is necessary. In such a case, we may need other BI wtools that can do exactly that. 
+3. Since this is retail data, there could be a time where a real-time analytics is necessary. In such a case, we may need other BI tools that can do exactly that (or even custom built dashboards using D3.js for example). 
 
 # Front-end (visualization)
 
