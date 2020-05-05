@@ -31,7 +31,9 @@ For the Assignment 1 part, the assumption is that it is a batch processing compo
 
 ![Postman Assignment 1](https://github.com/menorah84/sr_data_engineer_assessment/blob/master/img/postman_assignment_1_call.png)
 
-After processing, we move that file to some other bucket (we use bucket "folder" in this example) to indicate that the pipeline is done with this.
+After processing, the pipeline moves that file to some other bucket (we use bucket "folder" in this example) to indicate that the pipeline is done with this.
+
+![GCP Cloud Storage Processed](https://github.com/menorah84/sr_data_engineer_assessment/blob/master/img/gcp_cloud_storage_processed.png)
 
 For the Assignment 2 part, we send essentially the same payload, but instead of providing a Cloud Storage bucket/path where the data is, we include the data as part of the json.
 
