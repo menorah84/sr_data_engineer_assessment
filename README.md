@@ -43,7 +43,7 @@ We call the same REST API endpoint for the Cloud Function.
 
 https://us-central1-fl-uw-03.cloudfunctions.net/online-retail
 
-You can view the payloads in the [json_examples folder](https://github.com/menorah84/sr_data_engineer_assessment/tree/master/json_examples).
+You can view the payloads in the [json_examples](https://github.com/menorah84/sr_data_engineer_assessment/tree/master/json_examples) folder.
 
 (Note: While the Cloud Function REST endpoint is exposed publicly, it is not guaranteed to work for Assignment 1, as we should specify the files to be processed in the bucket. If there is no file there of such name, this will not work.) 
 
