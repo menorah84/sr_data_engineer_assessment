@@ -1,0 +1,25 @@
+{
+	"project": "fl-uw-03",
+	"dataset": "avaloq",
+	"table": "online_retail",
+	"data-source": "json-payload",
+	"data": [{
+		"InvoiceNo": "581587",
+		"StockCode": "22138",
+		"Description": "BAKING SET 9 PIECE RETROSPOT", 
+		"Quantity": 3,
+		"InvoiceDate": "2011-12-09 12:50:00.000",
+		"UnitPrice": 4.95,
+		"CustomerID": "12680",
+		"Country": "France"
+	}, {
+		"InvoiceNo": "581587",
+		"StockCode": "23255",
+		"Description": "CHILDRENS CUTLERY CIRCUS PARADE", 
+		"Quantity": 4,
+		"InvoiceDate": "2011-12-09 12:50:00.000",
+		"UnitPrice": 4.15,
+		"CustomerID": "12680",
+		"Country": "France"
+	}]
+}

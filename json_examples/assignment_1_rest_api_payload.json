@@ -1,0 +1,7 @@
+{
+	"project": "fl-uw-03",
+	"dataset": "avaloq",
+	"table": "online_retail",
+	"data-source": "cloud-storage",
+	"cloud-storage-path": "gs://online_retail_9ab322/landing/online_retail.csv"
+}

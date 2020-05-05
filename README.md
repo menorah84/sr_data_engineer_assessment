@@ -23,6 +23,26 @@ When it comes to Assignment 2, however, I was able to process streaming data but
 
 ![GCP BigQuery](https://github.com/menorah84/sr_data_engineer_assessment/blob/master/img/gcp_bigquery.png)
 
+# How to Use
+
+For the Assignment 1 part, the assumption is that it is a batch processing component. So the CSV file (or generically, some large data file) is stored in Cloud Storage bucket, which we call a landing zone, and the pipeline's REST API is invoked to commence processing to insert it into our data store (BigQuery).
+
+![GCP Cloud Storage](https://github.com/menorah84/sr_data_engineer_assessment/blob/master/img/gcp_cloud_storage.png)
+
+![Postman Assignment 1](https://github.com/menorah84/sr_data_engineer_assessment/blob/master/img/postman_assignment_1_call.png)
+
+After processing, we move that file to some other bucket (we use bucket "folder" in this example) to indicate that the pipeline is done with this.
+
+For the Assignment 2 part, we send essentially the same payload, but instead of providing a Cloud Storage bucket/path where the data is, we include the data as part of the json.
+
+![Postman Assignment 2](https://github.com/menorah84/sr_data_engineer_assessment/blob/master/img/postman_assignment_2_call.png)
+
+We call the same REST API endpoint for the Cloud Function.
+
+https://us-central1-fl-uw-03.cloudfunctions.net/online-retail
+
+You can view the payloads in the [json_examples folder](https://github.com/menorah84/sr_data_engineer_assessment/tree/master/json_examples).
+
 # Assignment 3: Improvements
 
 So here are my ideas for improvement:
