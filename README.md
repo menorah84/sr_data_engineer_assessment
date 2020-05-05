@@ -43,12 +43,15 @@ https://us-central1-fl-uw-03.cloudfunctions.net/online-retail
 
 You can view the payloads in the [json_examples folder](https://github.com/menorah84/sr_data_engineer_assessment/tree/master/json_examples).
 
+(Note: While the Cloud Function REST endpoint is exposed publicly, it is not guaranteed to work for Assignment 1, as we should specify the files to be processed in the bucket. If there is no file there of such name, this will not work.) 
+
 # Assignment 3: Improvements
 
 So here are my ideas for improvement:
 1. We could have used a schemaless datastore that has connector to some more powerful BI tool (that can also display geolocation data), say MongoDB and Tableau.
 2. For the ETL pipeline, serverless approach (Lambda / Cloud Functions) obviously has its limitations, as it is actually designed for small routines / microservices rather than  throughput intensive tasks like data processing. We could have used more robust, more capable pipeline: Airflow, Amazon Elastic MapReduce, Amazon Glue, Google Cloud Dataflow, etc. Or if cost comes to mind, maybe we can use Amazon S3-Athena (Presto) so we can directly query S3 files. If streaming capability is a requirement, we may need to engineer pipelines that involves queue (Kafka, Pubsub, Kinesis, etc.)
-3. Since this is retail data, there could be a time where a real-time analytics is necessary. In such a case, we may need other BI tools that can do exactly that (or even custom built dashboards using D3.js for example). 
+3. Since this is retail data, there could be a time where a real-time analytics is necessary. In such a case, we may need other BI tools that can do exactly that (or even custom built dashboards using D3.js for example).
+4. For Assignment 1, we are manually triggering the pipeline to commence processing of batch files. We can improve this by having the pipeline automatically trigger the process whenever it detects that a file is in the "landing" bucket.
 
 # Front-end (visualization)
 
